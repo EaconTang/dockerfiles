@@ -1,0 +1,5 @@
+*.rpm
+*.gz
+*.jar
+Dockerfile/bosun/bosun-linux-amd64
+Dockerfile/elasticsearch/elasticsearch-5.1.1/elasticsearch-5.1.1
