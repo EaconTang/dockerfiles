@@ -21,4 +21,8 @@ RUN tar zxvf spark-2.2.0-bin-hadoop2.7.tgz \
 
 
 # run pyspark
-CMD ["/opt/spark/bin/pyspark"]
+ADD entrypoint.py /opt/entrypoint.py
+RUN chmod +x /opt/entrypoint.py
+EXPOSE 8080 6066
+ENTRYPOINT ["/opt/entrypoint.py"]
+CMD ["start-master"]
