@@ -30,6 +30,6 @@ RUN chmod -R 777 /tmp
 # run pyspark
 ADD entrypoint.py /opt/entrypoint.py
 RUN chmod +x /opt/entrypoint.py
-EXPOSE 8080 6066
+EXPOSE 8080 7077 6066
 ENTRYPOINT ["/opt/entrypoint.py"]
 CMD ["start-master"]

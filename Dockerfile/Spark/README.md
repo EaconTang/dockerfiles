@@ -1,1 +1,1 @@
-> docker run -d --name spark -p <rest_port>:6066 -p <ui_port>:8080 -v <local_data_path>:/data eacon/spark:2.2
+> docker run -d --name spark -p 6066:6066 -p 7077:7077 -p 8080:8080 -v /Users/eacon/data/spark:/data eacon/spark:2.2
