@@ -19,6 +19,13 @@ RUN tar zxvf spark-2.2.0-bin-hadoop2.7.tgz \
   && mv spark-2.2.0-bin-hadoop2.7/ spark/ \
   && rm -f spark-2.2.0-bin-hadoop2.7.tgz
 
+# add env
+ENV SPARK_HOME /opt/spark
+ENV PATH $SPARK_HOME/bin:$SPARK_HOME/sbin:$PATH
+
+# fix issue:
+#   Caused by: java.lang.RuntimeException: The root scratch dir: /tmp/hive on HDFS should be writable.
+RUN chmod -R 777 /tmp
 
 # run pyspark
 ADD entrypoint.py /opt/entrypoint.py

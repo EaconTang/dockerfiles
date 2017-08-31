@@ -28,9 +28,9 @@ def print_help():
     """"""
     print '\n'.join([
         "Availabe args for running image:",
-        "\tstart-master:    start spark master server",
-        "\tspark-shell:     start spark scala shell",
-        "\tpyspatk:         start spark python shell"
+        "\tstart-master    start spark master server",
+        "\tspark-shell     start spark scala shell",
+        "\tpyspark         start spark python shell"
     ])
 
 def start_master():
@@ -48,10 +48,12 @@ def tail_log():
 
 def start_spark_shell():
     """"""
+    os.system('spark-shell')
 
 
 def start_pyspark():
     """"""
+    os.system('pyspark')
 
 
 if __name__ == '__main__':
